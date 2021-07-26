@@ -1,0 +1,39 @@
+# This is the configuration used to check the rubocop source code.
+AllCops:
+  NewCops: enable
+  Exclude:
+    - spec/support/spec_helper.rb
+    - spec/rails_helper.rb
+    - app/views/**/*.axlsx
+    - db/**/*
+    - docs/**/*
+    - config/**/*
+    - bin/**/*
+Style/Documentation:
+  Enabled: false
+Layout/LineLength:
+  Max: 99
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*
+Style/FrozenStringLiteralComment:
+  Enabled: false
+# rubocop-rspec custom configurations
+require: 
+  - rubocop-rspec
+  - rubocop-faker
+Naming/VariableNumber:
+  EnforcedStyle: snake_case
+RSpec/ExampleLength:
+  Max: 9
+  Exclude:
+RSpec/MultipleExpectations:
+  Enabled: false
+RSpec/NestedGroups:
+  Max: 5
+RSpec/InstanceVariable:
+  Enabled: false
+RSpec/AnyInstance:
+  Enabled: false
+RSpec/MultipleMemoizedHelpers:
+  Enabled: false
