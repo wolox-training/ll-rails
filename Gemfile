@@ -8,8 +8,9 @@ gem 'rubocop', '~> 1.18'
 gem 'rubocop-rails'
 gem 'rubocop-faker'
 gem 'rubocop-rspec'
-# Para poder tener un User que se loguee a la plataforma y que sólo usuarios autenticados puedan utilizarla. 
+# Para poder tener un User o Users que se logueen a la plataforma y que sólo usuarios autenticados puedan acceder. 
 gem 'devise_token_auth'
+gem 'omniauth'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4'
 # Use postgresql as the database for Active Record
