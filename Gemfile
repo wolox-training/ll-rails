@@ -11,6 +11,9 @@ gem 'rubocop-rspec'
 # Para poder tener un User o Users que se logueen a la plataforma y que sólo usuarios autenticados puedan acceder. 
 gem 'devise_token_auth'
 gem 'omniauth'
+# Trabajar con el protocolo HTTP con servicios externos
+gem 'httparty'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4'
 # Use postgresql as the database for Active Record
