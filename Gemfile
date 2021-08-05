@@ -13,6 +13,8 @@ gem 'devise_token_auth'
 gem 'omniauth'
 # Trabajar con el protocolo HTTP con servicios externos
 gem 'httparty'
+# Generar documentacion para nuestros test va de la mano con la gema rspec
+gem 'fictium'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4'
@@ -42,6 +44,8 @@ gem 'bootsnap', '>= 1.4.4', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  # Gema para poder hacer o crear test en nuestra aplicacion rspec-rails
+  gem 'rspec-rails', '~> 5.0.0'
 end
 
 group :development do
