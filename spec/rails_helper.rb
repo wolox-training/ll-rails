@@ -1,10 +1,22 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
+
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../config/environment', __dir__)
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'rspec/rails'
+require 'fictium/rspec' # Debe estar siempre luego del require  rspec/rails
+
+
+Fictium.configure do |config|
+  # You will require to configure the fixture path, if you want to use fixtures
+  config.fixture_path = File.join(__dir__, 'support', 'docs')
+
+  config.info.title = 'Documentacion de la API Libro'
+  config.info.description = 'Documentacion generada con la gema Fictium - Wolox Training'
+  config.info.version = '1'
+end
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
@@ -30,6 +42,8 @@ rescue ActiveRecord::PendingMigrationError => e
   puts e.to_s.strip
   exit 1
 end
+
+
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
