@@ -1,0 +1,10 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Documentacion de la API Libro",
+    "description": "Documentacion generada con la gema Fictium - Wolox Training",
+    "version": "1"
+  },
+  "paths": {
+  }
+}
